@@ -1,0 +1,8 @@
+# Name,   Type,  SubType, Offset,   Size,    Flags
+# BlindVision: 16MB flash. Big app partition holds the offline AI model (~9.4MB).
+# Arduino IDE -> Tools -> Flash Size MUST be "16MB (128Mb)".
+nvs,      data,  nvs,     0x9000,   0x5000,
+otadata,  data,  ota,     0xe000,   0x2000,
+app0,     app,   ota_0,   0x10000,  0xE00000,
+fr,       data,        ,  0xE10000, 0x20000,
+coredump, data,  coredump,0xE30000, 0x10000,
